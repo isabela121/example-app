@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cardapio', function (Blueprint $table) {
-            $table->id();
+        Schema::create('menu', function (Blueprint $table) {
+            $table->increments(column:'id');
+            $table->string(column:'name');
+            $table->float(column: 'price');
             $table->timestamps();
         });
     }
